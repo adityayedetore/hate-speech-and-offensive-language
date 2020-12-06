@@ -29,7 +29,8 @@ def train_model(model, train_iter, epoch):
         if torch.cuda.is_available():
             text = text.cuda()
             target = target.cuda()
-        if (text.size()[0] is not 32):# One of the batch returned by BucketIterator has length different than 32.
+        if (text.size()[0] is not 32):
+            # One of the batch returned by BucketIterator has length different than 32.
             continue
         optim.zero_grad()
         prediction = model(text)
@@ -42,7 +43,7 @@ def train_model(model, train_iter, epoch):
         steps += 1
         
         if steps % 100 == 0:
-            print (f'Epoch: {epoch+1}, Idx: {idx+1}, Training Loss: {loss.item():.4f}, Training Accuracy: {acc.item(): .2f}%')
+            print(f'Epoch: {epoch+1}, Idx: {idx+1}, Training Loss: {loss.item():.4f}, Training Accuracy: {acc.item(): .2f} percent')
         
         total_epoch_loss += loss.item()
         total_epoch_acc += acc.item()
@@ -72,10 +73,15 @@ def eval_model(model, val_iter):
 
     return total_epoch_loss/len(val_iter), total_epoch_acc/len(val_iter)
 	
+# TODO: turn these into arguments / manually change parameters
+# learning rate: 2e-3, 2e-4, 2e-5
+# hidden_size: 128, 256, 512
+# embedding_length: 150, 300, 600
+# 3x3x3 = 27 models (don't worry about random seeds for now)
 
 learning_rate = 2e-5
 batch_size = 32
-output_size = 2
+output_size = 3
 hidden_size = 256
 embedding_length = 300
 
@@ -90,6 +96,10 @@ for epoch in range(10):
     
 test_loss, test_acc = eval_model(model, test_iter)
 print(f'Test Loss: {test_loss:.3f}, Test Acc: {test_acc:.2f}%')
+
+# TODO: find a way to save models/results?
+
+# TODO: edit output: esp. fix the sample predictions code below (instead of pos/neg, hate/offensive/neither)
 
 ''' Let us now predict the sentiment on a single sentence just for the testing purpose. '''
 test_sen1 = "This is one of the best creation of Nolan. I can say, it's his magnum opus. Loved the soundtrack and especially those creative dialogues."

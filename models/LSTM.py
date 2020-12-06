@@ -14,7 +14,7 @@ class LSTMClassifier(nn.Module):
 		---------
 		batch_size : Size of the batch which is same as the batch_size of the data returned by the TorchText BucketIterator
 		output_size : 2 = (pos, neg)
-		hidden_sie : Size of the hidden_state of the LSTM
+		hidden_size : Size of the hidden_state of the LSTM
 		vocab_size : Size of the vocabulary containing unique words
 		embedding_length : Embeddding dimension of GloVe word embeddings
 		weights : Pre-trained GloVe word_embeddings which we will use to create our word_embedding look-up table 
