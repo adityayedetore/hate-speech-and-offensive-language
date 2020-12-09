@@ -30,7 +30,7 @@ def load_dataset(test_sen=None):
     # TODO: examine tokenization outputs
 
     tokenize = lambda x: x.split()
-    TEXT = data.Field(sequential=True, tokenize=tokenize, lower=True, include_lengths=True, batch_first=True, fix_length=200)
+    TEXT = data.Field(sequential=True, tokenize=tokenize, lower=True, include_lengths=True, batch_first=True) #fix_length=50)
     LABEL = data.LabelField()
     #LABEL = data.LabelField(tensor_type=torch.FloatTensor)
     #train_data, test_data = datasets.IMDB.splits(TEXT, LABEL)
@@ -52,7 +52,7 @@ def load_dataset(test_sen=None):
     train_data, valid_data = train_data.split(split_ratio=0.8888888889) # Further splitting of training_data to create new training_data & validation_data
     train_iter, valid_iter, test_iter = data.BucketIterator.splits((train_data, valid_data, test_data), batch_size=32, sort_key=lambda x: len(x.text), repeat=False, shuffle=True)
 
-    ipdb.set_trace()
+    #ipdb.set_trace()
     '''Alternatively we can also use the default configurations'''
     # train_iter, test_iter = datasets.IMDB.iters(batch_size=32)
 
