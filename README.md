@@ -4,9 +4,17 @@ Project mentor: Carlos Aguirre
 
 Aditya Yedetore <ayedeto1@jh.edu>, Karl Mulligan <kmullig3@jh.edu>
 
-https://github.com/adityayedetore/hate-speech-and-offensive-language
+## How to run our code
 
-*** Warning: though we will censor what we can, in some instances we will display offensive language and hate speech. Please proceed with caution. ***
+Requirements
+* python 3.7.0
+* pytorch 1.7.0
+* torchtext 0.8.0
+* A `cuda` enabled device
+
+To train the models, run `python3.7 main.py`. 
+
+To generate the plots, and view some other statistics there is a ipython notebook `analysis.ipynb`, which requires R to run. 
 
 Below this line is the origional README from this forked repo. 
 
