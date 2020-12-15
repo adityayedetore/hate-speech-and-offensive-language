@@ -1,3 +1,16 @@
+# CS475 Final Project: Classifying 🤬ffensive Language on Twitter
+### Using Recurrent Neural Networks To Classify Hate Speech 
+Project mentor: Carlos Aguirre
+
+Aditya Yedetore <ayedeto1@jh.edu>, Karl Mulligan <kmullig3@jh.edu>
+
+https://github.com/adityayedetore/hate-speech-and-offensive-language
+
+*** Warning: though we will censor what we can, in some instances we will display offensive language and hate speech. Please proceed with caution. ***
+
+Below this line is the origional README from this forked repo. 
+
+---
 # Automated Hate Speech Detection and the Problem of Offensive Language
 Repository for Thomas Davidson, Dana Warmsley, Michael Macy, and Ingmar Weber. 2017. "Automated Hate Speech Detection and the Problem of Offensive Language." ICWSM. You read the paper [here](https://aaai.org/ocs/index.php/ICWSM/ICWSM17/paper/view/15665).
 
