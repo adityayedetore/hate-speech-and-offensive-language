@@ -4,7 +4,7 @@ Project mentor: Carlos Aguirre
 
 Aditya Yedetore <ayedeto1@jh.edu>, Karl Mulligan <kmullig3@jh.edu>
 
-You can find the writeup for this project [here](https://github.com/adityayedetore/hate-speech-and-offensive-language/blob/master/Classifying_Offensive_Language_on_Twitter_With_RNNs.ipynb)
+**You can find the writeup for this project** [here](https://github.com/adityayedetore/hate-speech-and-offensive-language/blob/master/Classifying_Offensive_Language_on_Twitter_With_RNNs.ipynb)
 
 ## How to run our code
 
